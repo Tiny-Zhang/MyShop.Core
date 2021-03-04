@@ -26,8 +26,9 @@ namespace MyShopApi.Controllers
         [HttpGet]
         public async Task<IActionResult> MobileNotice()
         {
-            string content = "下午不用来上班";
+            string content = "下午不用来上班;";
             var getlist = await Task.Run(() => { return messageNotice.SendNotice(content); });
+
             return Ok(getlist);
         }
 

@@ -6188,11 +6188,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShopApi\\MyShopApi.csproj",
+      "projectUniqueName": "D:\\workspace\\MyShop.Core\\MyShopApi\\MyShopApi.csproj",
       "projectName": "MyShopApi",
-      "projectPath": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShopApi\\MyShopApi.csproj",
+      "projectPath": "D:\\workspace\\MyShop.Core\\MyShopApi\\MyShopApi.csproj",
       "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-      "outputPath": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShopApi\\obj\\",
+      "outputPath": "D:\\workspace\\MyShop.Core\\MyShopApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6212,11 +6212,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj": {
-              "projectPath": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj"
+            "D:\\workspace\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj": {
+              "projectPath": "D:\\workspace\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj"
             },
-            "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Services\\MyShop.Services.csproj": {
-              "projectPath": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Services\\MyShop.Services.csproj"
+            "D:\\workspace\\MyShop.Core\\MyShop.Services\\MyShop.Services.csproj": {
+              "projectPath": "D:\\workspace\\MyShop.Core\\MyShop.Services\\MyShop.Services.csproj"
             }
           }
         }

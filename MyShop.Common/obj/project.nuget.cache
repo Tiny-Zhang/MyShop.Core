@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OCsBG5pREm6N+M/6LupApz6W4nXzoQ4Y06SoIQ5RVJ+z1b4Pmnux7g1u3ZGvIH+CTNfZkTRv5sfWAENeq4FGHg==",
+  "dgSpecHash": "O5n0vjUaWGs6WPbiBd4McDJUjvcd5R2p7cjINQpSPpzIJC5EEx4CO9mjxl1/+naQHG/6DjN/JYt/CjgG/oVzEg==",
   "success": true,
-  "projectFilePath": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj",
+  "projectFilePath": "D:\\workspace\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

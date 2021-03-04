@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj": {}
+    "D:\\workspace\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj": {}
   },
   "projects": {
-    "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj": {
+    "D:\\workspace\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj",
+        "projectUniqueName": "D:\\workspace\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj",
         "projectName": "MyShop.Common",
-        "projectPath": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj",
+        "projectPath": "D:\\workspace\\MyShop.Core\\MyShop.Common\\MyShop.Common.csproj",
         "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-        "outputPath": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShop.Common\\obj\\",
+        "outputPath": "D:\\workspace\\MyShop.Core\\MyShop.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

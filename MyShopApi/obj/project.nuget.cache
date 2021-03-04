@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k+2xfAMh/iEJIkIThwrAhpFiopsC1oEbrXB11gjqK+rv7dcwbxWqTNqKXvcNeLzOlOXdaUdh2/8VZNzJYobHow==",
+  "dgSpecHash": "ZEEqFaPiGp28Ja4kWK57U/KVHEm5XAiCOZiYlKPde9Vio3dopPqIFeEV/Naja0Z58R4/mePoOqE+SkajyQTvVw==",
   "success": true,
-  "projectFilePath": "D:\\DeskTopWork\\NetCore\\MyShop.Core\\MyShopApi\\MyShopApi.csproj",
+  "projectFilePath": "D:\\workspace\\MyShop.Core\\MyShopApi\\MyShopApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\peter\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\peter\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
