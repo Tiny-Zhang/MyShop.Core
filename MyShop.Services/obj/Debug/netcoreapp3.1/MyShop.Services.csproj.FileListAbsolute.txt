@@ -16,3 +16,12 @@ D:\DeskTopWork\NetCore\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MySho
 D:\DeskTopWork\NetCore\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MyShop.Services.csproj.CoreCompileInputs.cache
 D:\DeskTopWork\NetCore\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MyShop.Services.dll
 D:\DeskTopWork\NetCore\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MyShop.Services.pdb
+D:\workspace\MyShop.Core\MyShop.Services\bin\Debug\netcoreapp3.1\MyShop.Services.deps.json
+D:\workspace\MyShop.Core\MyShop.Services\bin\Debug\netcoreapp3.1\MyShop.Services.dll
+D:\workspace\MyShop.Core\MyShop.Services\bin\Debug\netcoreapp3.1\MyShop.Services.pdb
+D:\workspace\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MyShop.Services.csprojAssemblyReference.cache
+D:\workspace\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MyShop.Services.AssemblyInfoInputs.cache
+D:\workspace\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MyShop.Services.AssemblyInfo.cs
+D:\workspace\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MyShop.Services.csproj.CoreCompileInputs.cache
+D:\workspace\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MyShop.Services.dll
+D:\workspace\MyShop.Core\MyShop.Services\obj\Debug\netcoreapp3.1\MyShop.Services.pdb

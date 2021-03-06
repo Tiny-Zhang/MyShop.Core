@@ -16,3 +16,12 @@ D:\DeskTopWork\NetCore\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyS
 D:\DeskTopWork\NetCore\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.csproj.CoreCompileInputs.cache
 D:\DeskTopWork\NetCore\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.dll
 D:\DeskTopWork\NetCore\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.pdb
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\netcoreapp3.1\MyShop.Repository.deps.json
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\netcoreapp3.1\MyShop.Repository.dll
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\netcoreapp3.1\MyShop.Repository.pdb
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.csprojAssemblyReference.cache
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.AssemblyInfoInputs.cache
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.AssemblyInfo.cs
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.csproj.CoreCompileInputs.cache
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.dll
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.pdb
