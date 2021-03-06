@@ -7,9 +7,13 @@
         /// </summary>
         public string DBType { get; set; }
         /// <summary>
-        /// 链接字符串
+        /// 链接字符串 主库
         /// </summary>
         public string DBConnectionString { get; set; }
+        /// <summary>
+        /// 链接字符串只读库
+        /// </summary>
+        public string DBReadOnlyConString { get; set; }
         /// <summary>
         /// 链接超时时间
         /// </summary>

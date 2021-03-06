@@ -25,3 +25,8 @@ D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Reposi
 D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.csproj.CoreCompileInputs.cache
 D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.dll
 D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.pdb
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\netcoreapp3.1\MyShop.Common.dll
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\netcoreapp3.1\MyShop.Model.dll
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\netcoreapp3.1\MyShop.Common.pdb
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\netcoreapp3.1\MyShop.Model.pdb
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\netcoreapp3.1\MyShop.Repository.csproj.CopyComplete
