@@ -1,20 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MyShop.Model.Entitys;
+using MyShop.Repository;
+using System;
 using System.Threading.Tasks;
 
 namespace MyShop.Services
 {
     public class UserService : IUserService
     {
-        public string QueryInfo(string name)
+        private readonly IUserRepository userRepository;
+
+        public UserService(IUserRepository _userRepository)
         {
-            return name;
+            userRepository = _userRepository ?? throw new ArgumentNullException(nameof(IUserRepository));
         }
 
-        public Task<string> QueryInfoAsync(string name)
+        public Users QueryUserInfo(string name)
         {
-            return Task.Run(() => { return name; });
+            return userRepository.QueryUserInfo(name);
         }
+
+        public async Task<Users> QueryUserInfoAsync(string name)
+        {
+            return await userRepository.QueryUserInfoAsync(name);
+        }
+
+
     }
 }

@@ -20,7 +20,7 @@
     "MyShopApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Notice",
+      "launchUrl": "api/User/GetUserInfo",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/Notice",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/User/GetUserInfo",
       "publishAllPorts": true
     }
   }

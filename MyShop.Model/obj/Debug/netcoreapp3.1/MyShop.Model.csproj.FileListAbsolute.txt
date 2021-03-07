@@ -19,9 +19,9 @@ D:\DeskTopWork\NetCore\MyShop.Core\MyShop.Model\obj\Debug\netcoreapp3.1\MyShop.M
 D:\workspace\MyShop.Core\MyShop.Model\bin\Debug\netcoreapp3.1\MyShop.Model.deps.json
 D:\workspace\MyShop.Core\MyShop.Model\bin\Debug\netcoreapp3.1\MyShop.Model.dll
 D:\workspace\MyShop.Core\MyShop.Model\bin\Debug\netcoreapp3.1\MyShop.Model.pdb
-D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\netcoreapp3.1\MyShop.Model.csprojAssemblyReference.cache
 D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\netcoreapp3.1\MyShop.Model.AssemblyInfoInputs.cache
 D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\netcoreapp3.1\MyShop.Model.AssemblyInfo.cs
 D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\netcoreapp3.1\MyShop.Model.csproj.CoreCompileInputs.cache
 D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\netcoreapp3.1\MyShop.Model.dll
 D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\netcoreapp3.1\MyShop.Model.pdb
+D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\netcoreapp3.1\MyShop.Model.csprojAssemblyReference.cache

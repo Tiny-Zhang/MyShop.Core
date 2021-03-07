@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using MyShop.Common;
 using MyShop.Services;
 using System;
 using System.Collections.Generic;
@@ -23,11 +24,13 @@ namespace MyShopApi
             //注册管理类 自己注册自己
             //builder.RegisterType<NoticeManager>();
 
+            //数据库接口
+            builder.RegisterType<DapperHelper>().As<IDatabase>();
+
             //批量注册程序集 没有接口，并且以Manager结尾的类,可以代替上边的 NoticeManager类注册
             var myshopapibll = Assembly.Load("MyShopApi");
             builder.RegisterAssemblyTypes(myshopapibll)
             .Where(t => t.Name.EndsWith("Manager"));
-
 
             //批量注册程序集  有接口
             var basedir = AppContext.BaseDirectory;
@@ -39,6 +42,18 @@ namespace MyShopApi
             }
             var assemblysServices = Assembly.LoadFrom(bllservice);  //Assembly.Load("MyShop.Services");
             builder.RegisterAssemblyTypes(assemblysServices)   //多个程序集用逗号","分割
+            .AsImplementedInterfaces()   //批量关联，让所有注册类型自动与其继承的接口进行关联
+            .InstancePerDependency();    //瞬时模式
+
+            //批量注册程序集  有接口
+            var dalservice = Path.Combine(basedir, "MyShop.Repository.dll");
+            if (!File.Exists(dalservice))
+            {
+                var msg = "MyShop.Repository.dll不存在";
+                throw new Exception(msg);
+            }
+            var assemblysRepository = Assembly.LoadFrom(dalservice);
+            builder.RegisterAssemblyTypes(assemblysRepository)   //多个程序集用逗号","分割
             .AsImplementedInterfaces()   //批量关联，让所有注册类型自动与其继承的接口进行关联
             .InstancePerDependency();    //瞬时模式
         }
