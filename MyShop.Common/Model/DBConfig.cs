@@ -1,4 +1,6 @@
-﻿namespace MyShop.Common
+﻿using System.Collections.Generic;
+
+namespace MyShop.Common
 {
     public class DBConfig
     {
@@ -13,7 +15,7 @@
         /// <summary>
         /// 链接字符串只读库
         /// </summary>
-        public string DBReadOnlyConString { get; set; }
+        public List<string> DbReadConnetionConString { get; set; }
         /// <summary>
         /// 链接超时时间
         /// </summary>

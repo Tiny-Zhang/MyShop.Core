@@ -38,7 +38,7 @@ namespace MyShopApi
                         // 2.也可以在appsettings.json中配置，LogLevel节点
 
                         // 3.统一设置
-                        builder.SetMinimumLevel(LogLevel.Error);
+                        //builder.SetMinimumLevel(LogLevel.Warning);
 
                         // 默认log4net.confg
                         builder.AddLog4Net(Path.Combine(Directory.GetCurrentDirectory(), "Log4net.config"));

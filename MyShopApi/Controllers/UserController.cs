@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using log4net;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MyShop.Common;
@@ -18,13 +19,13 @@ namespace MyShopApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(UserController));
         private readonly IUserService userService;
-        private readonly ILogger<UserController> logger;
+        //private readonly ILogger<UserController> logger;
 
-        public UserController(IUserService _userService, ILogger<UserController> _logger)
+        public UserController(IUserService _userService)
         {
             userService = _userService;
-            logger = _logger;
         }
 
         /// <summary>
@@ -36,20 +37,16 @@ namespace MyShopApi.Controllers
         public async Task<IActionResult> GetUserInfo([FromForm] UsersDto usersDto)
         {
             var name = usersDto.Username ?? throw new ArgumentNullException("Username不能为Null");
-            //ConcurrentDictionary<string, Users> dict = new ConcurrentDictionary<string, Users>();
-            List<Task> list = new List<Task>();
+            ConcurrentDictionary<string, Users> dict = new ConcurrentDictionary<string, Users>();
             for (int i = 0; i < 100; i++)
             {
-                var result = Task.Run(() =>
-                {
-                    logger.LogDebug("当前线程：" + Thread.CurrentThread.ManagedThreadId.ToString());
-                    return userService.QueryUserInfo(name);
-                });
-                list.Add(result);
-                //dict.GetOrAdd(i.ToString(), result.Result);
+                log.Fatal($"我是Fatal日志。。。{i}");
+                log.Error($"我是Error日志。。。{i}");
+                log.Info($"我是Info日志。。。{i}");
+                log.Debug($"我是Debug日志。。。{i}");
+                dict.GetOrAdd(i.ToString(), await userService.QueryUserInfoAsync(name));
             }
-            Task.WaitAll(list.ToArray());
-            return Ok(list);
+            return Ok(dict);
         }
 
         /// <summary>

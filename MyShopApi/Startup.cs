@@ -15,6 +15,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using MyShop.Common;
 using MyShop.Services;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace MyShopApi
 {
@@ -41,7 +43,18 @@ namespace MyShopApi
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+
+            services.AddControllers()
+            //全局配置Json
+            .AddNewtonsoftJson(options =>
+            {
+                //忽略循环引用
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                //不使用驼峰样式的key
+                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                //设置本地时间而非UTC时间
+                options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Local;
+            });
 
             //方式1
             //读取配置文件appsettings.json，将自定义节点绑定到DBConfig类中，在任意地方直接使用
@@ -52,6 +65,7 @@ namespace MyShopApi
             //将DBConfig对象注册到Service中，这样可以在Controller中注入使用
             //配置文件更新，绑定的值会实时更新
             services.Configure<DBConfig>(Configuration.GetSection("DBConfig"));
+
         }
 
         /// <summary>
