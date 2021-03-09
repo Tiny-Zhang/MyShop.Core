@@ -9,6 +9,8 @@ namespace MyShop.Common
     /// </summary>
     public interface IDataBase
     {
+	
+	
         /// <summary>
         /// 执行记录 (增、删、改)
         /// </summary>
