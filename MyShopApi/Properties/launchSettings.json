@@ -9,17 +9,8 @@
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "api/Notice",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
     "MyShopApi": {
       "commandName": "Project",
-      "launchBrowser": true,
       "launchUrl": "api/User/GetUserInfo",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

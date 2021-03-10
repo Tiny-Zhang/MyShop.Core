@@ -11,6 +11,8 @@ namespace MyShop.Common
         /// </summary>
         public static DBConfig dbConfig { get; set; }
 
+        public static JwtAuthorizeConfig jwtConfig { get; set; }
+
 
     }
 }
