@@ -18,7 +18,7 @@ namespace MyShopApi.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [Authorize]   //认证授权
+    //[Authorize]   //认证授权
     public class UserController : ControllerBase
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(UserController));
@@ -37,7 +37,7 @@ namespace MyShopApi.Controllers
         /// <param name="usersDto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> GetUserInfo([FromForm] UsersDto usersDto)
+        public async Task<IActionResult> GetUserInfo([FromBody] UsersDto usersDto)
         {
             var name = usersDto.Username ?? throw new ArgumentNullException("Username不能为Null");
             //ConcurrentDictionary<string, Users> dict = new ConcurrentDictionary<string, Users>();

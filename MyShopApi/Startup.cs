@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Autofac;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,6 +20,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using MyShop.Common;
 using MyShop.Services;
+using MyShopApi.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -74,6 +76,7 @@ namespace MyShopApi
 
             #endregion
 
+            #region JWT认证
             //注册认证(使用JWT认证)
             var symmetricKeyAsBase64 = SystemContext.jwtConfig.Secret;
             var keyByteArray = Encoding.ASCII.GetBytes(symmetricKeyAsBase64);
@@ -132,6 +135,30 @@ namespace MyShopApi
                      }
                  };
              });
+            #endregion
+
+            #region 跨域
+
+            //支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
+            //--http://127.0.0.1:1818 和 --http://localhost:1818 是不一样的，尽量写两个
+            var origins = new List<string> { "http://127.0.0.1:8080", "http://localhost:8080", "http://192.168.106.95:8080" };
+            services.AddCors(c =>
+            {
+                // 配置策略
+                c.AddPolicy("CorsRequests", policy =>
+                {
+                    policy
+                    .WithOrigins(origins.ToArray())
+                    .AllowAnyHeader()   //允许任意头
+                    .AllowAnyMethod();  //允许任意方法
+                });
+            });
+
+            #endregion
+
+            //AutoMapper注册
+            services.AddAutoMapper(typeof(AutoMapperConfig));
+            AutoMapperConfig.AutoMapperRegister();
 
 
         }
@@ -154,6 +181,9 @@ namespace MyShopApi
             }
 
             app.UseRouting();
+
+            //添加Cors 跨域中间件
+            app.UseCors("CorsRequests");
 
             //开启认证
             app.UseAuthentication();

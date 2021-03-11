@@ -37,6 +37,7 @@ namespace MyShopApi
 
                         // 2.也可以在appsettings.json中配置，LogLevel节点
 
+
                         // 3.统一设置
                         //builder.SetMinimumLevel(LogLevel.Warning);
 
