@@ -1,4 +1,5 @@
 ﻿using MyShop.Model.Entitys;
+using MyShop.Model.EntitysDto;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,8 +9,8 @@ namespace MyShop.Services
 {
     public interface IUserService
     {
-        Users QueryUserInfo(string name);
-        Task<Users> QueryUserInfoAsync(string name);
+        UsersDto QueryUserInfo(string name);
+        Task<UsersDto> QueryUserInfoAsync(string name);
 
     }
 }

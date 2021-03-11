@@ -12,6 +12,7 @@ namespace MyShop.Common
     /// <summary>
     /// private 保证当前类不会被实例化
     /// sealed 保证当前类不会被继承
+    /// 或：继承一个接口，使用单例注册的模式调用也一样
     /// </summary>
     public sealed class DbConnectionFactory
     {
