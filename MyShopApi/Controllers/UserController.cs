@@ -40,15 +40,18 @@ namespace MyShopApi.Controllers
         public async Task<IActionResult> GetUserInfo([FromBody] UsersDto usersDto)
         {
             var name = usersDto.Username ?? throw new ArgumentNullException("Username不能为Null");
-            //ConcurrentDictionary<string, Users> dict = new ConcurrentDictionary<string, Users>();
+
+            //ConcurrentDictionary<string, UsersDto> dict = new ConcurrentDictionary<string, UsersDto>();
             //for (int i = 0; i < 100; i++)
             //{
-            //    log.Fatal($"我是Fatal日志。。。{i}");
-            //    log.Error($"我是Error日志。。。{i}");
-            //    log.Info($"我是Info日志。。。{i}");
-            //    log.Debug($"我是Debug日志。。。{i}");
+            //    //log.Fatal($"我是Fatal日志。。。{i}");
+            //    //log.Error($"我是Error日志。。。{i}");
+            //    //log.Info($"我是Info日志。。。{i}");
+            //    //log.Debug($"我是Debug日志。。。{i}");
             //    dict.GetOrAdd(i.ToString(), await userService.QueryUserInfoAsync(name));
             //}
+            //return Ok(dict);
+
             var result = await userService.QueryUserInfoAsync(name);
             return Ok(result);
         }

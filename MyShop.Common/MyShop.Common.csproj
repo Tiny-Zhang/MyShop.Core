@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
@@ -11,6 +11,8 @@
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
 		<PackageReference Include="log4net" Version="2.0.12" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="5.0.0" />
+		<PackageReference Include="SqlSugarCore" Version="5.0.2.6" />
+		<PackageReference Include="StackExchange.Redis" Version="2.2.4" />
 	</ItemGroup>
 
 </Project>

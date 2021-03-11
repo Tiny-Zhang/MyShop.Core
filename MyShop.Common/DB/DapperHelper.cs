@@ -11,6 +11,12 @@ namespace MyShop.Common
 {
     public class DapperHelper : IDataBase
     {
+        //private readonly IDbConnectionFactory dbConnectionFactory;
+
+        //public DapperHelper(IDbConnectionFactory _dbConnectionFactory)
+        //{
+        //    dbConnectionFactory = _dbConnectionFactory;
+        //}
 
         /// <summary>
         /// 执行记录 (增、删、改)

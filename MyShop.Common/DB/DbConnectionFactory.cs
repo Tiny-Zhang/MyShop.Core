@@ -10,31 +10,38 @@ using System.Threading;
 namespace MyShop.Common
 {
     /// <summary>
-    /// private 保证当前类不会被实例化
+    /// 私有构造函数不能被实例化
     /// sealed 保证当前类不会被继承
     /// 或：继承一个接口，使用单例注册的模式调用也一样
     /// </summary>
-    public sealed class DbConnectionFactory
+    public sealed class DbConnectionFactory //: IDbConnectionFactory
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(DbConnectionFactory));
-        private static DbConnectionFactory dbConnectionFactory = new DbConnectionFactory();
-        private static readonly object objlock = new object();
 
-        private DbConnectionFactory() { }
-
-        private static DbConnectionFactory GetInstance()
+        private DbConnectionFactory()
         {
-            if (dbConnectionFactory == null)
+            log.Debug($"A看看我实例了几次：{Thread.CurrentThread.ManagedThreadId}");
+        }
+
+        private static readonly object objlock = new object();
+        private static DbConnectionFactory dbConnectionFactory = new DbConnectionFactory();
+        private static DbConnectionFactory GetInstance
+        {
+            get
             {
-                lock (objlock)
+                if (dbConnectionFactory == null)
                 {
-                    if (dbConnectionFactory == null)
+                    lock (objlock)
                     {
-                        dbConnectionFactory = new DbConnectionFactory();
+                        if (dbConnectionFactory == null)
+                        {
+                            log.Debug($"B看看我实例了几次：{Thread.CurrentThread.ManagedThreadId}");
+                            dbConnectionFactory = new DbConnectionFactory();
+                        }
                     }
                 }
+                return dbConnectionFactory;
             }
-            return dbConnectionFactory;
         }
 
         /// <summary>
@@ -46,11 +53,11 @@ namespace MyShop.Common
         {
             if (connectionType == DbConnectionType.Write)
             {
-                return GetInstance().GetWriteDbConnection();
+                return GetInstance.GetWriteDbConnection();
             }
             else
             {
-                return GetInstance().GetReadDbConnection();
+                return GetInstance.GetReadDbConnection();
             }
         }
 

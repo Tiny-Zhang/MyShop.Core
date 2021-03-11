@@ -26,6 +26,8 @@ namespace MyShopApi
 
             //数据库接口
             builder.RegisterType<DapperHelper>().As<IDataBase>();
+            //builder.RegisterType<DbConnectionFactory>().As<IDbConnectionFactory>().SingleInstance();  //单例模式
+
 
             //批量注册程序集 没有接口，并且以Manager结尾的类,可以代替上边的 NoticeManager类注册
             var myshopapibll = Assembly.Load("MyShopApi");

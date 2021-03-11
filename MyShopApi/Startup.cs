@@ -1,25 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Autofac;
-using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using MyShop.Common;
-using MyShop.Services;
 using MyShopApi.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -156,9 +149,18 @@ namespace MyShopApi
 
             #endregion
 
-            //AutoMapper注册
+            #region AutoMapper
             services.AddAutoMapper(typeof(AutoMapperConfig));
             AutoMapperConfig.AutoMapperRegister();
+            #endregion
+
+            //SqlSugar 注入
+            //services.AddSqlSugar(new IocConfig()
+            //{
+            //    ConnectionString =Configuration["SqlServerString"],
+            //    DbType = IocDbType.SqlServer,
+            //    IsAutoCloseConnection = true    //自动关闭连接
+            //});
 
 
         }
