@@ -100,11 +100,13 @@ namespace MyShopApi
                  };
                  opetion.Events = new JwtBearerEvents
                  {
+                     //未授权时触发
                      OnChallenge = context =>
                      {
                          context.Response.Headers.Add("Token-Error", context.ErrorDescription);
                          return Task.CompletedTask;
                      },
+                     //认证失败时触发
                      OnAuthenticationFailed = context =>
                      {
                          var token = context.Request.Headers["Authorization"].ToString().Trim().Replace("Bearer ", "");
@@ -125,16 +127,22 @@ namespace MyShopApi
                              context.Response.Headers.Add("Expired", "Token Expired!");
                          }
                          return Task.CompletedTask;
+                     },
+                     //在Token验证通过后调用
+                     OnTokenValidated = context => {
+                         return Task.CompletedTask;
                      }
                  };
              });
             #endregion
 
+
+
             #region 跨域
 
             //支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
             //--http://127.0.0.1:1818 和 --http://localhost:1818 是不一样的，尽量写两个
-            var origins = new List<string> { "http://127.0.0.1:8080", "http://localhost:8080", "http://192.168.106.95:8080" };
+            var origins = new List<string> { "http://127.0.0.1:8080", "http://localhost:8080", "http://192.168.0.7:8088" };
             services.AddCors(c =>
             {
                 // 配置策略
