@@ -56,5 +56,29 @@ namespace MyShop.Repository
                 return null;
             }
         }
+
+        /// <summary>
+        /// 通过用户名密码获取用户信息
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="pwd"></param>
+        /// <returns></returns>
+        public async Task<Users> QueryUserInfoAsync(string name, string pwd)
+        {
+            string sql = @"SELECT [Userid],[Username],[Password],[TrueName],[Sex],[Email],
+                           [Birthday],[Head],[Mobile],[status],[islock],[regtime]
+                           FROM [Users](nolock)
+                           where islock=0 AND status=1 and Username=@Username AND Password=@Password";
+            try
+            {
+                var result = await database.QueryFirstAsync<Users>(sql, new { Username = name, Password = pwd });
+                return result;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError($"通过用户名密码获取用户信息异常：{ex.Message},参数：{name}");
+                return null;
+            }
+        }
     }
 }

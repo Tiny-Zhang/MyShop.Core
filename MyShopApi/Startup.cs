@@ -2,12 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using Autofac;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -76,13 +79,13 @@ namespace MyShopApi
             var signingKey = new SymmetricSecurityKey(keyByteArray);
             var Issuer = SystemContext.jwtConfig.Issuer;  //发布人
             var Audience = SystemContext.jwtConfig.Audience; //订阅人
-            var exp = 20;  //有效时长(秒) 60s过期
             services.AddAuthentication(o =>
             {
                 o.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(opetion =>
              {
+                 //认证规则
                  opetion.TokenValidationParameters = new TokenValidationParameters
                  {
                      ValidateIssuerSigningKey = true,   //是否开启密钥认证
@@ -95,7 +98,7 @@ namespace MyShopApi
                      ValidAudience = Audience,  //订阅人
 
                      ValidateLifetime = true,   //验证生命周期
-                     ClockSkew = TimeSpan.FromSeconds(exp),   //有效时长
+                     ClockSkew = TimeSpan.FromSeconds(30),  //exp过期时允许的偏移时长(默认5分钟)
                      RequireExpirationTime = true   //验证过期时间
                  };
                  opetion.Events = new JwtBearerEvents
@@ -116,27 +119,59 @@ namespace MyShopApi
                          {
                              context.Response.Headers.Add("Issuer", "issuer is wrong!");
                          }
-
                          if (jwtToken.Audiences.FirstOrDefault() != Audience)
                          {
                              context.Response.Headers.Add("Audience", "Audience is wrong!");
                          }
-                         // 如果过期，则把<是否过期>添加到，返回头信息中
+                         // 如果过期，添加到返回头信息中
                          if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
                          {
                              context.Response.Headers.Add("Expired", "Token Expired!");
                          }
                          return Task.CompletedTask;
-                     },
-                     //在Token验证通过后调用
-                     OnTokenValidated = context => {
-                         return Task.CompletedTask;
                      }
+                     //在Token验证通过后调用
+                     //OnTokenValidated = context =>
+                     //{
+                     //    return Task.CompletedTask;
+                     //}
                  };
              });
             #endregion
 
+            #region JWT授权
+            // 角色与接口的权限要求参数
+            var rolesList = new List<string>();   //角色列表，登录时再赋值
+            var roletype = "Roles";
+            var signingCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
+            var permissionRequirement = new PermissionRequirement(
+                claimType: roletype,   //自定义授权类型
+                issuer: Issuer,      //发行人
+                audience: Audience,    //听众
+                signingCredentials: signingCredentials,//签名凭据
+                expiration: TimeSpan.FromSeconds(60),  //接口的过期时间
+                rolesList: rolesList);
+            services.AddAuthorization(options =>
+            {
+                //角色授权，使用方式[Authorize(Policy="AdminPolicy")]
+                //需要在生成token的claims中指定角色，如：new Claim(ClaimTypes.Role, "Admin")
+                options.AddPolicy("AdminPolicy", o =>
+                {
+                    o.RequireRole("Admin").Build();
+                });
 
+                //自定义授权策略,使用方式 [Authorize(Policy="Permission")]
+                options.AddPolicy("CustomPolicy", o =>
+                {
+                    o.Requirements.Add(permissionRequirement);
+                });
+            });
+
+            services.AddScoped<IAuthorizationHandler, PermissionHandler>();  //注入权限处理
+            services.AddSingleton(permissionRequirement);  //单例注册
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            #endregion
 
             #region 跨域
 

@@ -37,6 +37,8 @@ namespace MyShopApi.Controllers
         /// <param name="usersDto"></param>
         /// <returns></returns>
         [HttpPost]
+        //[Authorize(Roles = "Admin")]    //Admin角色才可以访问该接口
+        [Authorize(Policy = "CustomPolicy")]   //自定义授权
         public async Task<IActionResult> GetUserInfo([FromBody] UsersDto usersDto)
         {
             var name = usersDto.Username ?? throw new ArgumentNullException("Username不能为Null");

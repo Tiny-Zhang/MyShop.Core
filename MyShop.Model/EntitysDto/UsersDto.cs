@@ -6,6 +6,7 @@ namespace MyShop.Model.EntitysDto
 {
     public class UsersDto
     {
+        public int Userid { get; set; }
         public string Username { get; set; }
         public string TrueName { get; set; }
         public string Email { get; set; }

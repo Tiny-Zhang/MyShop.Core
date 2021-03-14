@@ -11,11 +11,11 @@
   "profiles": {
     "MyShopApi": {
       "commandName": "Project",
-      "launchUrl": "api/User/GetUserInfo",
+      //"launchUrl": "api/User/GetUserInfo",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://192.168.106.95:5000"
+      "applicationUrl": "http://localhost:5000"
     },
     "Docker": {
       "commandName": "Docker",

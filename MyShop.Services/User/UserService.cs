@@ -12,7 +12,7 @@ namespace MyShop.Services
         private readonly IUserRepository userRepository;
         private readonly IMapper mapper;
 
-        public UserService(IUserRepository _userRepository,IMapper _mapper)
+        public UserService(IUserRepository _userRepository, IMapper _mapper)
         {
             userRepository = _userRepository ?? throw new ArgumentNullException(nameof(IUserRepository));
             mapper = _mapper;
@@ -25,10 +25,14 @@ namespace MyShop.Services
 
         public async Task<UsersDto> QueryUserInfoAsync(string name)
         {
-            var result= mapper.Map<UsersDto>(await userRepository.QueryUserInfoAsync(name));
+            var result = mapper.Map<UsersDto>(await userRepository.QueryUserInfoAsync(name));
             return result;
         }
 
-
+        public async Task<UsersDto> QueryUserInfoAsync(string name, string pwd)
+        {
+            var result = mapper.Map<UsersDto>(await userRepository.QueryUserInfoAsync(name, pwd));
+            return result;
+        }
     }
 }
