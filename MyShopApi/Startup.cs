@@ -82,6 +82,8 @@ namespace MyShopApi
             services.AddAuthentication(o =>
             {
                 o.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                //o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                //o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(opetion =>
              {
@@ -149,7 +151,7 @@ namespace MyShopApi
                 issuer: Issuer,      //发行人
                 audience: Audience,    //听众
                 signingCredentials: signingCredentials,//签名凭据
-                expiration: TimeSpan.FromSeconds(60),  //接口的过期时间
+                expiration: TimeSpan.FromSeconds(60 * 5),  //接口的过期时间
                 rolesList: rolesList);
             services.AddAuthorization(options =>
             {

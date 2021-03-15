@@ -27,7 +27,7 @@ namespace MyShopApi.Controllers
         }
 
         /// <summary>
-        /// 获取token
+        /// 获取token  函数作废，使用GetJwtToken代替
         /// </summary>
         /// <returns></returns>
         [HttpGet]
