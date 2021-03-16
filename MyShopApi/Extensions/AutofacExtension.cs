@@ -15,6 +15,12 @@ namespace MyShopApi
     public class AutofacExtension : Autofac.Module
     {
         //重写Load函数
+        /// <summary>
+        /// InstancePerLifetimeScope 在一次Api请求范围内获取到的实例都是一样的
+        /// SingleInstance  全局单例
+        /// InstancePerDependency  瞬时模式
+        /// </summary>
+        /// <param name="builder"></param>
         protected override void Load(ContainerBuilder builder)
         {
             //注册电话接口
@@ -52,7 +58,7 @@ namespace MyShopApi
             var assemblysServices = Assembly.LoadFrom(bllservice);  //Assembly.Load("MyShop.Services");
             builder.RegisterAssemblyTypes(assemblysServices)   //多个程序集用逗号","分割
             .AsImplementedInterfaces()   //批量关联，让所有注册类型自动与其继承的接口进行关联
-            .InstancePerDependency();    //瞬时模式
+            .InstancePerLifetimeScope();    //在一次请求范围内获取到的实例都是一样的
 
             //批量注册程序集  有接口
             var dalservice = Path.Combine(basedir, "MyShop.Repository.dll");
@@ -64,7 +70,7 @@ namespace MyShopApi
             var assemblysRepository = Assembly.LoadFrom(dalservice);
             builder.RegisterAssemblyTypes(assemblysRepository)   //多个程序集用逗号","分割
             .AsImplementedInterfaces()   //批量关联，让所有注册类型自动与其继承的接口进行关联
-            .InstancePerDependency();    //瞬时模式
+            .InstancePerLifetimeScope();    //在一次请求范围内获取到的实例都是一样的
         }
     }
 }
