@@ -20,7 +20,7 @@ namespace MyShop.Common
 
         private DbConnectionFactory()
         {
-            log.Debug($"A看看我实例了几次：{Thread.CurrentThread.ManagedThreadId}");
+            //log.Debug($"A看看我实例了几次：{Thread.CurrentThread.ManagedThreadId}");
         }
 
         private static readonly object objlock = new object();
@@ -35,7 +35,7 @@ namespace MyShop.Common
                     {
                         if (dbConnectionFactory == null)
                         {
-                            log.Debug($"B看看我实例了几次：{Thread.CurrentThread.ManagedThreadId}");
+                            //log.Debug($"B看看我实例了几次：{Thread.CurrentThread.ManagedThreadId}");
                             dbConnectionFactory = new DbConnectionFactory();
                         }
                     }

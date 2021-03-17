@@ -23,7 +23,6 @@ namespace MyShopApi.Controllers
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(UserController));
         private readonly IUserService userService;
-        //private readonly ILogger<UserController> logger;
 
         public UserController(IUserService _userService)
         {
@@ -38,21 +37,19 @@ namespace MyShopApi.Controllers
         /// <returns></returns>
         [HttpPost]
         //[Authorize(Roles = "Admin")]    //Admin角色才可以访问该接口
-        [Authorize(Policy = "CustomPolicy")]   //自定义授权
+        //[Authorize(Policy = "CustomPolicy")]   //自定义授权
         public async Task<IActionResult> GetUserInfo([FromBody] UsersDto usersDto)
         {
             var name = usersDto.Username ?? throw new ArgumentNullException("Username不能为Null");
 
+            //Parallel.For 可以并行循环执行https://blog.csdn.net/woaipangruimao/article/details/79800587
             //ConcurrentDictionary<string, UsersDto> dict = new ConcurrentDictionary<string, UsersDto>();
-            //for (int i = 0; i < 100; i++)
+            //ParallelLoopResult paraResult = Parallel.For(0, 100, async (i, state) =>
             //{
-            //    //log.Fatal($"我是Fatal日志。。。{i}");
-            //    //log.Error($"我是Error日志。。。{i}");
-            //    //log.Info($"我是Info日志。。。{i}");
-            //    //log.Debug($"我是Debug日志。。。{i}");
+            //    log.Debug($"迭代次数：{i},任务ID:{Task.CurrentId},线程ID:{Thread.CurrentThread.ManagedThreadId}");
             //    dict.GetOrAdd(i.ToString(), await userService.QueryUserInfoAsync(name));
-            //}
-            //return Ok(dict);
+            //});
+            //if (paraResult.IsCompleted) return Ok(dict);
 
             var result = await userService.QueryUserInfoAsync(name);
             return Ok(result);

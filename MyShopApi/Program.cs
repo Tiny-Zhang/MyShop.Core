@@ -32,8 +32,8 @@ namespace MyShopApi
                     .ConfigureLogging((hostingContext, builder) =>
                     {
                         // 1.过滤掉系统默认的一些日志
-                        builder.AddFilter("System", LogLevel.Error);
-                        builder.AddFilter("Microsoft", LogLevel.Error);
+                        builder.AddFilter("System", LogLevel.Warning);
+                        builder.AddFilter("Microsoft", LogLevel.Warning);
 
                         // 2.也可以在appsettings.json中配置，LogLevel节点
 

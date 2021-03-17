@@ -11,7 +11,6 @@ namespace MyShop.Services
     {
         UsersDto QueryUserInfo(string name);
         Task<UsersDto> QueryUserInfoAsync(string name);
-
         Task<UsersDto> QueryUserInfoAsync(string name, string pwd);
 
     }

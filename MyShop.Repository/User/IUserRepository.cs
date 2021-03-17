@@ -10,7 +10,6 @@ namespace MyShop.Repository
     {
         Users QueryUserInfo(string name);
         Task<Users> QueryUserInfoAsync(string name);
-
         Task<Users> QueryUserInfoAsync(string name,string pwd);
     }
 }
