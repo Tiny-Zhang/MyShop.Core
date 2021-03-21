@@ -29,6 +29,7 @@ namespace MyShopApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>()
+                    //.UseUrls("http://*:5000")    //表示设置当前应用端口是5000,可以从配置文件读取
                     .ConfigureLogging((hostingContext, builder) =>
                     {
                         // 1.过滤掉系统默认的一些日志

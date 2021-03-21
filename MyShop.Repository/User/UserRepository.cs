@@ -27,16 +27,8 @@ namespace MyShop.Repository
                            [Birthday],[Head],[Mobile],[status],[islock],[regtime]
                            FROM [Users](nolock)
                            where Username=@Username";
-            try
-            {
-                var result = database.QueryFirst<Users>(sql, new { Username = name });
-                return result;
-            }
-            catch (Exception ex)
-            {
-                logger.LogError($"同步获取用户信息异常：{ex.Message},参数：{name}");
-                return null;
-            }
+            var result = database.QueryFirst<Users>(sql, new { Username = name });
+            return result;
         }
 
         public async Task<Users> QueryUserInfoAsync(string name)
@@ -45,16 +37,8 @@ namespace MyShop.Repository
                            [Birthday],[Head],[Mobile],[status],[islock],[regtime]
                            FROM [Users](nolock)
                            where Username=@Username";
-            try
-            {
-                var result = await database.QueryFirstAsync<Users>(sql, new { Username = name });
-                return result;
-            }
-            catch (Exception ex)
-            {
-                logger.LogError($"异步获取用户信息异常：{ex.Message},参数：{name}");
-                return null;
-            }
+            var result = await database.QueryFirstAsync<Users>(sql, new { Username = name });
+            return result;
         }
 
         /// <summary>
@@ -69,16 +53,8 @@ namespace MyShop.Repository
                            [Birthday],[Head],[Mobile],[status],[islock],[regtime]
                            FROM [Users](nolock)
                            where islock=0 AND status=1 and Username=@Username AND Password=@Password";
-            try
-            {
-                var result = await database.QueryFirstAsync<Users>(sql, new { Username = name, Password = pwd });
-                return result;
-            }
-            catch (Exception ex)
-            {
-                logger.LogError($"通过用户名密码获取用户信息异常：{ex.Message},参数：{name}");
-                return null;
-            }
+            var result = await database.QueryFirstAsync<Users>(sql, new { Username = name, Password = pwd });
+            return result;
         }
     }
 }

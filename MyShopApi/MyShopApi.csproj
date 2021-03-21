@@ -4,7 +4,18 @@
 		<TargetFramework>net5.0</TargetFramework>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<DockerfileContext>.</DockerfileContext>
+		<UserSecretsId>c6d70f44-0801-443d-b1cf-40586359d031</UserSecretsId>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="Log4net.config" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="Log4net.config">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
@@ -21,6 +32,12 @@
 	<ItemGroup>
 		<ProjectReference Include="..\MyShop.Common\MyShop.Common.csproj" />
 		<ProjectReference Include="..\MyShop.Services\MyShop.Services.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Dockerfile">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 

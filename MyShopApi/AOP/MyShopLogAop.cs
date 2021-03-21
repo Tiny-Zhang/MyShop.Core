@@ -21,6 +21,7 @@ namespace MyShopApi
     /// 6、object ReturnValue { get; set; }执行后调用，
     /// 7、object[] Arguments参数对象
     /// 8、将MyShopLogAop拦截器注入Autofac容器，代理服务层
+    /// 适合业务逻辑相关业务、比如： Redis缓存
     /// </summary>
     public class MyShopLogAop : IInterceptor
     {
@@ -41,7 +42,7 @@ namespace MyShopApi
 
             try
             {
-                //这句话表示在被拦截的方法执行完毕后 继续执行当前方法，注意是被拦截的是异步的
+                //这句话表示继续执行当前被调用的接口方法，注意是被拦截的是异步的
                 invocation.Proceed();
 
                 //事后处理: 在service层被执行了以后,做相应的处理,这里是输出到日志文件
@@ -63,8 +64,8 @@ namespace MyShopApi
             }
             catch (Exception ex)
             {
-                interceptinfo += $"【执行异常】：{ex.Message + "," + ex.InnerException}";
-                log.LogError(interceptinfo);
+                //interceptinfo += $"【执行异常】：\r\n{ex.Message + "," + ex.InnerException}";
+                //log.LogError(interceptinfo);
             }
 
 

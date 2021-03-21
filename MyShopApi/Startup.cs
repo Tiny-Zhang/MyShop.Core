@@ -17,6 +17,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using MyShop.Common;
 using MyShopApi.Extensions;
+using MyShopApi.Filter;
+using MyShopApi.Middlewares;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -45,8 +47,10 @@ namespace MyShopApi
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers()
+            services.AddControllers(options =>
+            {
+                options.Filters.Add(typeof(CustomExceptionsFilter));   //全局异常过滤器注册(全局生效)
+            })
             //全局配置Json
             .AddNewtonsoftJson(options =>
             {
@@ -172,7 +176,8 @@ namespace MyShopApi
             services.AddScoped<IAuthorizationHandler, PermissionHandler>();  //注入权限处理
             services.AddSingleton(permissionRequirement);  //单例注册
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
+            //如果想要获取用户信息，还要注册一个用户服务，等权限验证通过之后，存储用户信息
+            //services.AddScoped<IUser, AspNetUser>();
             #endregion
 
             #region 跨域
@@ -222,6 +227,13 @@ namespace MyShopApi
         /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //自定义中间管道
+            app.UseRequestResponseLogs();  //请求和响应日志
+
+
+
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
