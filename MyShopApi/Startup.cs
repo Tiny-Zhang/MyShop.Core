@@ -47,6 +47,7 @@ namespace MyShopApi
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
+            //注册控制器 
             services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(CustomExceptionsFilter));   //全局异常过滤器注册(全局生效)
@@ -121,6 +122,7 @@ namespace MyShopApi
                          var token = context.Request.Headers["Authorization"].ToString().Trim().Replace("Bearer ", "");
                          var jwtToken = (new JwtSecurityTokenHandler()).ReadJwtToken(token);
 
+                         context.Response.ContentType = "text/plain charset/utf-8";
                          if (jwtToken.Issuer != Issuer)
                          {
                              context.Response.Headers.Add("Issuer", "issuer is wrong!");
@@ -239,6 +241,7 @@ namespace MyShopApi
                 app.UseDeveloperExceptionPage();
             }
 
+            //路由
             app.UseRouting();
 
             //添加Cors 跨域中间件

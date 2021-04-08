@@ -1,0 +1,17 @@
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\net5.0\MyShop.Repository.deps.json
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\net5.0\MyShop.Repository.dll
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\net5.0\ref\MyShop.Repository.dll
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\net5.0\MyShop.Repository.pdb
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\net5.0\MyShop.Common.dll
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\net5.0\MyShop.Model.dll
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\net5.0\MyShop.Common.pdb
+D:\workspace\MyShop.Core\MyShop.Repository\bin\Debug\net5.0\MyShop.Model.pdb
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\net5.0\MyShop.Repository.csprojAssemblyReference.cache
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\net5.0\MyShop.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\net5.0\MyShop.Repository.AssemblyInfoInputs.cache
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\net5.0\MyShop.Repository.AssemblyInfo.cs
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\net5.0\MyShop.Repository.csproj.CoreCompileInputs.cache
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\net5.0\MyShop.Repository.csproj.CopyComplete
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\net5.0\MyShop.Repository.dll
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\net5.0\ref\MyShop.Repository.dll
+D:\workspace\MyShop.Core\MyShop.Repository\obj\Debug\net5.0\MyShop.Repository.pdb

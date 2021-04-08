@@ -1,0 +1,12 @@
+D:\workspace\MyShop.Core\MyShop.Model\bin\Debug\net5.0\MyShop.Model.deps.json
+D:\workspace\MyShop.Core\MyShop.Model\bin\Debug\net5.0\MyShop.Model.dll
+D:\workspace\MyShop.Core\MyShop.Model\bin\Debug\net5.0\ref\MyShop.Model.dll
+D:\workspace\MyShop.Core\MyShop.Model\bin\Debug\net5.0\MyShop.Model.pdb
+D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\net5.0\MyShop.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\net5.0\MyShop.Model.AssemblyInfoInputs.cache
+D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\net5.0\MyShop.Model.AssemblyInfo.cs
+D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\net5.0\MyShop.Model.csproj.CoreCompileInputs.cache
+D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\net5.0\MyShop.Model.dll
+D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\net5.0\ref\MyShop.Model.dll
+D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\net5.0\MyShop.Model.pdb
+D:\workspace\MyShop.Core\MyShop.Model\obj\Debug\net5.0\MyShop.Model.csprojAssemblyReference.cache

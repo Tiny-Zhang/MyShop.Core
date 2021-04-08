@@ -1,0 +1,125 @@
+﻿2021-03-28 13:34:03,397| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 13:34:03,415| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:11:21,876| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:11:28,456| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:11:32,129| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:21:29,987| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:21:35,906| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:22:11,700| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:22:15,594| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:22:57,215| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:23:49,803| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:24:33,443| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:25:21,899| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:25:26,637| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:25:54,943| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:25:58,697| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:27:48,158| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:28:02,373| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:28:24,344| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:29:52,857| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:32:40,238| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:33:30,573| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:36:59,145| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:37:19,972| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
+2021-03-28 16:39:02,605| WARN MyShopApi.MyShopLogAop 
+【当前执行方法】：QueryUserInfoAsync
+【携带的参数有】：49270967@qq.com
+【执行完成结果】：{"Userid":27,"Username":"49270967@qq.com","TrueName":null,"Email":"49270967@qq.com","Head":"","Mobile":"27","Status":"锁定","CreatTime":"2015-06-02 11:20:48"}
+--------------------------------
