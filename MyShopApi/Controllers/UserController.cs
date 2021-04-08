@@ -63,7 +63,7 @@ namespace MyShopApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetSecretKey(int? length)
         {
-            var name = length ?? throw new ArgumentNullException("参数length不能为Null");
+            var name = length ?? throw new ArgumentNullException("参数length不能为Null.");
             var result = await Task.Run(() =>
             {
                 return Encryption.GetEncrytionKey((int)length);
