@@ -34,11 +34,5 @@
 		<ProjectReference Include="..\MyShop.Services\MyShop.Services.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <None Update="Dockerfile">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </None>
-	</ItemGroup>
-
 
 </Project>

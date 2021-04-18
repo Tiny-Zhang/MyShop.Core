@@ -32,6 +32,7 @@ namespace MyShopApi.Controllers
         /// <summary>
         /// FromForm 是以表单的形式接收
         /// FromBody 是以Json的形式接收
+        /// [FromQuery] 表示参数来自地址栏，get方式请求，[FromQuery]SearchViewModel model
         /// </summary>
         /// <param name="usersDto"></param>
         /// <returns></returns>

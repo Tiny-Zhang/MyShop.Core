@@ -4,10 +4,14 @@
     "MyShopApi": {
       "commandName": "Project",
       "environmentVariables": {
-        //"ASPNETCORE_ENVIRONMENT": "Development"
         "ASPNETCORE_ENVIRONMENT": "Production"
       },
       "applicationUrl": "http://localhost:5000"
+    },
+    "Docker (1)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true
     }
   }
 }
