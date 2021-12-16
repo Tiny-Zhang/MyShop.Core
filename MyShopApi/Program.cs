@@ -32,17 +32,21 @@ namespace MyShopApi
                     //.UseUrls("http://*:5000")    //表示设置当前应用端口是5000,可以从配置文件读取
                     .ConfigureLogging((hostingContext, builder) =>
                     {
-                        // 1.过滤掉系统默认的一些日志
-                        builder.AddFilter("System", LogLevel.Warning);
-                        builder.AddFilter("Microsoft", LogLevel.Warning);
+                        //1.过滤掉系统默认的一些日志
+                        //2.这里配置后，appsettings.json中的Logging配置将失效
+                        builder.AddFilter("System", LogLevel.Error);    //只有错误时才打印日志
+                        builder.AddFilter("Microsoft", LogLevel.Error);  //只有错误时才打印日志
+                        builder.AddFilter("Microsoft.Hosting.Lifetime", LogLevel.Error);  //只有错误时才打印日志
+                        builder.AddFilter("MyShopApi", LogLevel.Debug);  //使用项目命名空间 自定义项目过滤级别
 
-                        // 2.也可以在appsettings.json中配置，LogLevel节点
+                        //清除console控制台打印的日志
+                        //builder.ClearProviders();
 
-
-                        // 3.统一设置
+                        //3.统一设置  不知道为什么这里没有生效
                         //builder.SetMinimumLevel(LogLevel.Warning);
 
-                        // 默认log4net.confg
+                        //默认log4net.confg
+                        //Windows不区分大小写，这里这么写为了适应Linux平台
                         builder.AddLog4Net(Path.Combine(Directory.GetCurrentDirectory(), "Log4net.config"));
                     });
                 });
