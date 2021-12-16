@@ -23,10 +23,12 @@ namespace MyShopApi.Controllers
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(UserController));
         private readonly IUserService userService;
+        private readonly ILogger<UserController> logger;
 
-        public UserController(IUserService _userService)
+        public UserController(IUserService _userService,ILogger<UserController> _logger)
         {
             userService = _userService;
+            this.logger = _logger;
         }
 
         /// <summary>
@@ -42,6 +44,14 @@ namespace MyShopApi.Controllers
         public async Task<IActionResult> GetUserInfo([FromBody] UsersDto usersDto)
         {
             var name = usersDto.Username ?? throw new ArgumentNullException("Username不能为Null");
+
+            //测试日志
+            this.logger.LogInformation("this is logInfo");
+            this.logger.LogError("this is logerror");
+            this.logger.LogDebug("this is debug");
+            this.logger.LogWarning("this is warning");
+            this.logger.LogTrace("this is trace");
+
 
             //Parallel.For 可以并行循环执行https://blog.csdn.net/woaipangruimao/article/details/79800587
             //ConcurrentDictionary<string, UsersDto> dict = new ConcurrentDictionary<string, UsersDto>();
