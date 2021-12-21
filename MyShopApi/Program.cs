@@ -34,7 +34,7 @@ namespace MyShopApi
                     {
                         //1.过滤掉系统默认的一些日志
                         //2.这里配置后，appsettings.json中的Logging配置将失效
-                        builder.AddFilter("System", LogLevel.Error);    //只有错误时才打印日志
+                        builder.AddFilter("System", LogLevel.Error);     //只有错误时才打印日志
                         builder.AddFilter("Microsoft", LogLevel.Error);  //只有错误时才打印日志
                         builder.AddFilter("Microsoft.Hosting.Lifetime", LogLevel.Error);  //只有错误时才打印日志
                         builder.AddFilter("MyShopApi", LogLevel.Debug);  //使用项目命名空间 自定义项目过滤级别
